@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Crunchyroll Apple TV - Nuevos doblajes</title>
+    <link>https://tv.apple.com/</link>
+    <description>Detección automática de audio de Crunchyroll en Español (España) e Italiano (Italia) en Apple TV</description>
+    <language>es-ES</language>
+  </channel>
+</rss>
+``
