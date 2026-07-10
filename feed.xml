@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <rss version="2.0">
   <channel>
     <title>Crunchyroll Apple TV - Nuevos doblajes</title>
     <link>https://tv.apple.com/</link>
     <description>Detección automática de audio de Crunchyroll en Español (España) e Italiano (Italia) en Apple TV</description>
     <language>es-ES</language>
+    <item>
+      <title>Rent-a-Girlfriend - Rutina y novia</title>
+      <link>https://tv.apple.com/us/episode/rutina-y-novia/umc.cmc.6h9m7ld6gp4g1qmoeh6x6gho5?showId=umc.cmc.1xtksx7jktuexscxkjiaxmc50&amp;l=es</link>
+      <guid isPermaLink="false">https://tv.apple.com/us/episode/rutina-y-novia/umc.cmc.6h9m7ld6gp4g1qmoeh6x6gho5?showId=umc.cmc.1xtksx7jktuexscxkjiaxmc50&amp;l=es</guid>
+      <description>Proveedor: Crunchyroll. Detectado: Audio en Italiano (Italia) (AAC)</description>
+      <pubDate>Fri, 10 Jul 2026 09:02:16 GMT</pubDate>
+    </item>
   </channel>
 </rss>
