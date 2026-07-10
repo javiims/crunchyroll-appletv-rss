@@ -139,10 +139,11 @@ def canonical_tracking_url(url):
 
 def fetch_url(url, session):
     """
-    Download an Apple TV page.
+    Download an Apple TV page and decode it explicitly as UTF-8.
 
-    Returns the HTML when successful.
-    Returns None when the request fails.
+    Apple TV pages declare UTF-8 in their HTML, but requests may sometimes
+    infer an incorrect encoding. Using response.content.decode("utf-8")
+    prevents text such as "Español" from becoming "EspaÃ±ol".
     """
     try:
         response = session.get(
@@ -153,12 +154,21 @@ def fetch_url(url, session):
         )
         response.raise_for_status()
 
+        try:
+            page_html = response.content.decode("utf-8")
+        except UnicodeDecodeError:
+            page_html = response.content.decode(
+                "utf-8",
+                errors="replace",
+            )
+
         print(
             f"Downloaded: {url} "
-            f"(HTTP {response.status_code}, {len(response.text)} characters)"
+            f"(HTTP {response.status_code}, "
+            f"{len(page_html)} characters)"
         )
 
-        return response.text
+        return page_html
 
     except requests.RequestException as error:
         print(f"ERROR downloading {url}: {error}")
